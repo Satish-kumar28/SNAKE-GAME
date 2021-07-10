@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title?>Snake game by satish </title>
+<link rel="stylesheet" href="stylesheet.css">
+<script src="index.js"></script>
+
+</head>
+<body>
+    <div id = "loading">LOADING...</div>
+    <div id = "menu">
+        <div id = "settings" class = "menu-btn" onclick = "ShowSettings();"></div>
+        <div id = "rules" class = "menu-btn" onclick = "ShowRules();"></div>
+        <div class = "heading">My Ex... By Satish </div>
+        <div class = "lvl" onclick = "OpenLevel(0);">LEVEL 1</div>
+        <div class = "lvl" onclick = "OpenLevel(1);">LEVEL 2</div>
+        <div class = "lvl" onclick = "OpenLevel(2);">LEVEL 3</div>
+        <div class = "lvl" onclick = "OpenLevel(3);">LEVEL 4</div>
+        <div class = "lvl" onclick = "OpenLevel(4);">LEVEL 5</div>
+        <div class = "lvl special" onclick = "OpenSpecialLevel();"><div id = "shine"></div>CUSTOM LEVEL</div>
+        <br><br><br>
+    </div>
+    <div id = "you-lost">
+        <div id = "yl-box">
+        <div id = "yl-heading">YOU LOST</div>
+        <div id = "final-score"></div>
+        <div id = "replay-btn" class = "btn" onclick = "Replay();">REPLAY</div>
+        <div id = "menu-btn" class = "btn" onclick = "ShowMenu();">HOME</div>
+        </div>
+    </div>
+    <div id = "dark-bg"></div>
+    <div id = "settings-page">
+        <div id = "sp-heading">SETTINGS</div>
+        <div id = "speed">SPEED</div>
+        <div id = "min">min (3)</div>
+        <div id = "max">max (7)</div>
+        <input type = 'range' min = '0' max = '4' step = '1' value = '2'>
+        <div id = "back" onclick = "HideSettings();">back</div>
+    </div>
+    <div id = "input">
+        <div id = "wall-input">
+            <div id = "boxes-div"></div>
+            <div id = "input-layer"></div>
+        </div>
+        <div id = "clear" class = "wi-btn" onclick = "ClearWalls();">CLEAR</div>
+        <div id = "done" class = "wi-btn" onclick = "DoneWalls();">DONE</div>
+    </div>
+    <div id = "game">
+        <div id = "score">Score: 0</div>
+        <div id = "board">
+            <div id = "layer">
+                <div id = "snake-head" class = "snake" style = "left:32%;top:40%;">
+                    <div id  = "eye-1"></div>
+                    <div id = "eye-2"></div>
+                    <div id = "toung-1"></div>
+                    <div id = "toung-2" class = "toungs"></div>
+                    <div id = "toung-3" class = "toungs"></div>
+                </div>
+                <div class = "snake snake-body" style = "left:28%;top:40%;"></div>
+                <div class = "snake snake-body" style = "left:24%;top:40%;"></div>
+                <div id = "snake-tail" class = "snake" style = "left:20%;top:40%;">
+                    <div id = "st-1"></div>
+                </div>
+                <div id = "apple"></div>
+            </div>
+        </div>
+    </div>
+    <div id = "rules-page">
+        <div id = "rp-block">
+            <div id = "rules-heading">RULES</div>
+            <div id = "rules-text">(1) For laptop/pc, you can use the up down left right buttons on your keyboard to control the direction of the snake, and for mobiles you have to swipe in order to give the snake a direction. <br>(2) you can not touch the edges of the map or the walls (represented by black color,<br> (3) starting from level 2), the snake can not even touch its tail, else the snake will die.<br>(4) You can go to the settings to increase or decrease the speed of the snake acoording to your wish, more is the speed, higher will be the bonus in the score as you eat an apple. <br><br> <b> ©️ Satish_shekhar </b> <br>Thanks :(</div>
+            <div id = "rp-back" onclick = "HideRules();">back</div>
+        </div>
+    </div>
+
+
+</body>
+
+
+</html>
